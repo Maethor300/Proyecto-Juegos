@@ -8,7 +8,7 @@ const {YOUR_API_KEY} = process.env;
 
 router.get("/", (req,res)=> {
     axios.get(`https://api.rawg.io/api/games?key=${YOUR_API_KEY}`)
-    .then(response => res.send(response.data))
+    .then(response => res.status(202).send(response.data))
     .catch(res.status(404))
 })
 

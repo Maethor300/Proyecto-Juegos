@@ -3,6 +3,7 @@ import './App.css';
 import img1 from "./img/3551.jpg";
 import ButtonHome from "./components/ButtonHome/ButtonHome.js"
 import ButtonOrder from "./components/order/ButtonOrder.js"
+import Videogames from './components/videogames/videogames';
 function App() {
   return (
     <React.Fragment>
@@ -14,7 +15,8 @@ function App() {
       <ButtonHome />
       <ButtonOrder/>
       </div>
-      <img className="App-header" src ={img1} alt="Fondo videojuegos"/> 
+      <img className="App-header" src ={img1} alt="Fondo videojuegos"/>
+      <Videogames/> 
     </div>
    
     </React.Fragment>

@@ -8,7 +8,7 @@ export const FETCH_VIDEOGAMES = 'FETCH_VIDEOGAMES';
         .then((videogames) => {
             dispatch({
                 type:FETCH_VIDEOGAMES,
-                payload: videogames.data
+                payload: videogames
             })
         })
      } 
