@@ -1,4 +1,5 @@
-import { FETCH_VIDEOGAMES } from "../actions";
+import { FETCH_VIDEOGAMES,
+         SEARCH_VIDEOGAMES } from "../actions";
 
 const initialState = {
     videoGames: [],
@@ -12,10 +13,14 @@ const initialState = {
                 videoGames:action.payload.data
                  
             }
+        case SEARCH_VIDEOGAMES:
+            return {
+                ...state,
+                videoGames:action.payload.data
+            }
             default:
                 return {
                     ...state
                 }
     }
 }
- 

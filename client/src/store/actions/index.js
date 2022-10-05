@@ -1,6 +1,6 @@
 import axios from 'axios';
 export const FETCH_VIDEOGAMES = 'FETCH_VIDEOGAMES';
-
+export const SEARCH_VIDEOGAMES = 'SEARCH_VIDEOGAMES';
 
  export function fetchVideoGames(){
      return function (dispatch){
@@ -13,3 +13,14 @@ export const FETCH_VIDEOGAMES = 'FETCH_VIDEOGAMES';
         })
      } 
  }
+ export function searchVideoGames(search){
+     return function(dispatch){
+        axios.get('http://localhost:3001/games/search?name='+ search)
+        .then((videogames2) =>{
+             dispatch({
+                type:SEARCH_VIDEOGAMES,
+                payload: videogames2
+             })
+        })
+     }
+}

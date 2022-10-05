@@ -19,6 +19,11 @@ router.get("/search", async(req,res)=>{
            const apiOriginal = await axios.get(`https://api.rawg.io/api/games?key=${YOUR_API_KEY}&search=${name}`)
            let json1 = await apiOriginal.data.results;
            let recorrer = json1.filter(i => i.name === name);
+        //    let mapeado = recorrer.map(e => ({
+        //     image:e.background_image,
+        //     nombre:e.name,
+        //     genres:e.genres
+        //    }))
            return res.status(200).send(recorrer);
         }else{
             res.status(404).json({error: "Please a Name"})

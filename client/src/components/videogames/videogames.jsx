@@ -12,7 +12,7 @@ export default function Videogames(){
     return <div>
         {videogames.map((videogames) => {
             
-        return <Videogame name = {videogames.name} image = {videogames.background_image}/>
+        return <Videogame name = {videogames.name} image = {videogames.background_image} />
         })}
       
     </div>
