@@ -5,10 +5,10 @@ export const FETCH_VIDEOGAMES = 'FETCH_VIDEOGAMES';
  export function fetchVideoGames(){
      return function (dispatch){
         axios.get('http://localhost:3001/games')
-        .then((videogames) => {
+        .then((videogames1) => {
             dispatch({
                 type:FETCH_VIDEOGAMES,
-                payload: videogames
+                payload: videogames1
             })
         })
      } 

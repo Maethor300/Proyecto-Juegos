@@ -10,6 +10,7 @@ const initialState = {
             return {
                 ...state,
                 videoGames:action.payload.data
+                 
             }
             default:
                 return {
